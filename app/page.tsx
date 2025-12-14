@@ -45,10 +45,10 @@ export default function Home() {
           <div className="mx-auto max-w-7xl flex justify-between items-center">
             <div className="flex items-center gap-6">
                <span className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer">
-                 <Phone size={12} /> +91 98765 43210
+                 <Phone size={12} /> +91 9951040546
                </span>
                <span className="flex items-center gap-2 hover:text-white transition-colors cursor-pointer">
-                 <Mail size={12} /> hsg@cmrit.ac.in
+                 <Mail size={12} /> hindustanscoutsandguides.cmrit@gmail.com
                </span>
             </div>
             <div className="flex items-center gap-4">
@@ -58,7 +58,10 @@ export default function Home() {
                   <Instagram size={14} className="hover:text-pink-500 cursor-pointer transition-colors" />
                   <Linkedin size={14} className="hover:text-blue-700 cursor-pointer transition-colors" />
                </div>
-               <Link href="/login" className="flex items-center gap-2 hover:text-white transition-colors font-medium">
+               <Link 
+                 href="/login" 
+                 className="flex items-center gap-2 rounded-none bg-blue-600 px-3 py-1 text-white font-semibold shadow-sm hover:bg-blue-700 transition-colors"
+               >
                  <LogIn size={12} /> Portal Login
                </Link>
             </div>
@@ -66,27 +69,27 @@ export default function Home() {
         </div>
 
         {/* Main Navigation Bar */}
-        <header className="border-b border-zinc-200 bg-white/95 backdrop-blur-xl supports-[backdrop-filter]:bg-white/80 shadow-sm">
+        <header className="border-b border-zinc-200 bg-white shadow-sm">
           <div className="mx-auto flex h-20 md:h-24 max-w-7xl items-center justify-between px-6 lg:px-8">
             
             {/* Left: Dual Logos & Brand */}
             <Link href="/" className="flex items-center gap-4 group">
                
                {/* 1. CMRIT Logo */}
-               <div className="relative h-12 w-12 md:h-16 md:w-16 flex-shrink-0">
+               <div className="relative h-16 w-16 md:h-20 md:w-20 shrink-0">
                   <Image 
                     src="https://avatars.githubusercontent.com/u/65121137?s=280&v=4" 
                     alt="CMRIT Logo" 
                     fill 
                     className="object-contain" 
-                  /> 
+                 /> 
                </div>
 
                {/* Divider */}
-               <div className="h-10 w-[1px] bg-zinc-300"></div>
+               <div className="h-12 w-[1px] bg-zinc-300"></div>
 
                {/* 2. HSG Logo */}
-               <div className="relative h-12 w-12 md:h-16 md:w-16 flex-shrink-0">
+               <div className="relative h-16 w-16 md:h-20 md:w-20 shrink-0">
                   <Image 
                     src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516854/logo_bivaq2.jpg" 
                     alt="HSG Logo" 
@@ -210,7 +213,7 @@ export default function Home() {
                 
                 {/* Description */}
                 <p className="text-lg text-zinc-400 leading-relaxed mb-10 max-w-xl">
-                  Join the <strong className="text-white">Hindustan Scouts and Guides</strong> (CMRIT Chapter). We don't just build tents; we build character, discipline, and the leaders of tomorrow through service and adventure.
+                  Join the <strong className="text-white">Hindustan Scouts and Guides</strong> (CMRIT Chapter). We don’t just build tents; we build character, discipline, and the leaders of tomorrow through service and adventure.
                 </p>
 
                 {/* Buttons (Left Aligned) */}
@@ -873,7 +876,7 @@ export default function Home() {
             </h2>
             
             <p className="text-lg text-slate-300 mb-10 max-w-2xl mx-auto leading-relaxed">
-              Don't just watch history happen—be a part of it. Join the CMRIT Hindustan Scouts and Guides today to build character, serve the nation, and create a legacy of adventure.
+              Don’t just watch history happen—be a part of it. Join the CMRIT Hindustan Scouts and Guides today to build character, serve the nation, and create a legacy of adventure.
             </p>
             
             <div className="flex flex-col sm:flex-row gap-5 justify-center items-center">
@@ -903,7 +906,14 @@ export default function Home() {
             {/* Column 1: Brand & Address */}
             <div className="space-y-6">
               <div className="flex items-center gap-3 text-white">
-                 <div className="h-10 w-10 bg-blue-600 rounded-xl flex items-center justify-center font-bold text-xl shadow-lg shadow-blue-900/20">H</div>
+                 <div className="relative h-10 w-10">
+                   <Image
+                     src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516854/logo_bivaq2.jpg"
+                     alt="HSG Logo"
+                     fill
+                     className="object-contain"
+                   />
+                 </div>
                  <div className="flex flex-col leading-none">
                     <span className="text-lg font-bold">CMRIT HSG</span>
                     <span className="text-[10px] uppercase tracking-widest text-zinc-500">Rover & Ranger Unit</span>
@@ -916,8 +926,8 @@ export default function Home() {
                  <MapPin className="w-5 h-5 text-blue-500 flex-shrink-0 mt-0.5" />
                  <span>
                    CMR Institute of Technology,<br/>
-                   ITPL Main Road, Bangalore,<br/>
-                   Karnataka 560037.
+                   Kandlakoya Village, Hyderabad,<br/>
+                   Telanagana 501401.
                  </span>
               </div>
             </div>
@@ -965,13 +975,13 @@ export default function Home() {
                      <div className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
                        <Mail size={14} className="text-zinc-400 group-hover:text-white" />
                      </div>
-                     <span className="group-hover:text-white transition-colors">hsg@cmrit.ac.in</span>
+                     <span className="group-hover:text-white transition-colors">hindustanscoutsandguides.cmrit@gmail.com</span>
                   </div>
                   <div className="flex items-center gap-3 group cursor-pointer">
                      <div className="w-8 h-8 rounded-full bg-zinc-900 flex items-center justify-center group-hover:bg-blue-600 transition-colors">
                        <Phone size={14} className="text-zinc-400 group-hover:text-white" />
                      </div>
-                     <span className="group-hover:text-white transition-colors">+91 98765 43210</span>
+                     <span className="group-hover:text-white transition-colors">+91 9951040546</span>
                   </div>
                </div>
             </div>
