@@ -75,6 +75,9 @@ const NAV_LINKS = [
   { name: "Levels", href: "#levels" },
   { name: "Team", href: "/team" },
   { name: "Gallery", href: "/gallery" },
+  { name: "News", href: "/news" },
+  { name: "Documents", href: "/documents" },
+  { name: "Events", href: "/events" },
 ];
 
 export default function Home() {
@@ -149,26 +152,15 @@ export default function Home() {
                </div>
             </Link>
 
-            {/* Center: Desktop Nav */}
-            <nav className="hidden xl:flex gap-1">
-              {NAV_LINKS.map((link) => (
-                <Link 
-                  key={link.name} 
-                  href={link.href}
-                  className="text-sm font-semibold text-zinc-600 hover:text-blue-700 hover:bg-blue-50 px-3 py-2 rounded-full transition-all"
-                >
-                  {link.name}
-                </Link>
-              ))}
-            </nav>
+            {/* Center: Desktop Nav (moved to secondary navbar below) */}
 
             {/* Right: CTA */}
             <div className="hidden md:flex items-center gap-4">
                <Link 
                  href="/register" 
-                 className="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-blue-600/20 hover:bg-blue-700 hover:scale-105 transition-all"
+                 className="rounded-none bg-red-600 px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-red-600/20 hover:bg-red-700 transition-colors"
                >
-                 Join Now
+                 Register Now 
                </Link>
             </div>
 
@@ -181,7 +173,7 @@ export default function Home() {
             </button>
           </div>
 
-          {/* Mobile Nav Dropdown */}
+          {/* Mobile Nav Dropdown (Menu items only) */}
           {isMobileMenuOpen && (
             <div className="xl:hidden border-t border-zinc-200 bg-white px-6 py-6 space-y-4 shadow-xl max-h-[80vh] overflow-y-auto">
               <div className="flex flex-col space-y-2">
@@ -196,26 +188,27 @@ export default function Home() {
                   </Link>
                 ))}
               </div>
-              
-              <div className="border-t border-zinc-100 pt-4 flex flex-col gap-3">
-                <Link 
-                   href="/login" 
-                   className="flex items-center justify-center gap-2 w-full rounded-lg border border-zinc-200 px-4 py-3 text-sm font-semibold text-zinc-700 hover:bg-zinc-50"
-                   onClick={() => setIsMobileMenuOpen(false)}
-                 >
-                   <LogIn size={18} /> Portal Login
-                 </Link>
-                <Link 
-                   href="/register" 
-                   className="block w-full text-center rounded-lg bg-blue-700 px-4 py-3 text-sm font-semibold text-white hover:bg-blue-800"
-                   onClick={() => setIsMobileMenuOpen(false)}
-                 >
-                   Join Now
-                 </Link>
-              </div>
             </div>
           )}
         </header>
+      </div>
+      
+      {/* Secondary Menu Navbar */}
+      <div className="sticky top-[64px] md:top-[80px] z-40 w-full border-y border-zinc-200 bg-zinc-50 backdrop-blur-sm shadow-sm">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8">
+          <div className="h-px bg-gradient-to-r from-blue-200 via-zinc-200 to-transparent"></div>
+          <nav className="hidden xl:flex items-center gap-1 py-2">
+            {NAV_LINKS.map((link) => (
+              <Link
+                key={link.name}
+                href={link.href}
+                className="text-sm font-semibold text-zinc-700 px-3 py-2 rounded-md hover:bg-zinc-100 hover:text-zinc-900 transition-colors"
+              >
+                {link.name}
+              </Link>
+            ))}
+          </nav>
+        </div>
       </div>
 
      {/* --- 2. Hero Section --- */}
@@ -232,7 +225,8 @@ export default function Home() {
                   alt={`Banner ${i + 1}`} 
                   fill 
                   className="object-cover object-center" 
-                  sizes="100vw"
+                  sizes="(max-width: 768px) 100vw, (max-width: 1200px) 100vw, 100vw"
+                  quality={90}
                   priority={i === 0}
                 />
               </div>
