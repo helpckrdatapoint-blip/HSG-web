@@ -408,64 +408,73 @@ export default function Home() {
             </p>
           </div>
 
-          {/* Grid Layout */}
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
             
-            {/* Level 1 */}
-            <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-zinc-200 transition-all hover:-translate-y-1 hover:shadow-xl">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-teal-500/40 via-teal-400/30 to-transparent group-hover:from-teal-500 group-hover:via-teal-400"></div>
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-teal-50 text-teal-600 ring-1 ring-teal-100 group-hover:bg-teal-600 group-hover:text-white transition-colors">
                 <Footprints size={24} />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-1">Praveshika</h3>
-              <p className="text-sm font-semibold text-blue-500 uppercase tracking-wide mb-3">Entry Level</p>
+              <p className="inline-flex items-center gap-2 text-[11px] font-semibold text-teal-600 uppercase tracking-wide mb-3 px-2 py-0.5 bg-teal-50 rounded">
+                Entry Level
+              </p>
               <p className="text-zinc-600 leading-relaxed">
                 The foundation. Designed to assess core knowledge and essential survival skills for new recruits.
               </p>
             </div>
 
-            {/* Level 2 */}
-            <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-zinc-200 transition-all hover:-translate-y-1 hover:shadow-xl">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-500/40 via-indigo-400/30 to-transparent group-hover:from-indigo-500 group-hover:via-indigo-400"></div>
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 ring-1 ring-indigo-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                 <Compass size={24} />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-1">Komalpad</h3>
-              <p className="text-sm font-semibold text-blue-500 uppercase tracking-wide mb-3">Basic Skills</p>
+              <p className="inline-flex items-center gap-2 text-[11px] font-semibold text-indigo-600 uppercase tracking-wide mb-3 px-2 py-0.5 bg-indigo-50 rounded">
+                Basic Skills
+              </p>
               <p className="text-zinc-600 leading-relaxed">
                 Focuses on developing proficiency in field craft and deepening the understanding of scouting principles.
               </p>
             </div>
 
-            {/* Level 3 */}
-            <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-zinc-200 transition-all hover:-translate-y-1 hover:shadow-xl">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-sky-500/40 via-sky-400/30 to-transparent group-hover:from-sky-500 group-hover:via-sky-400"></div>
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-sky-50 text-sky-600 ring-1 ring-sky-100 group-hover:bg-sky-600 group-hover:text-white transition-colors">
                 <MountainSnow size={24} />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-1">Dhruvpadh</h3>
-              <p className="text-sm font-semibold text-blue-500 uppercase tracking-wide mb-3">Intermediate</p>
+              <p className="inline-flex items-center gap-2 text-[11px] font-semibold text-sky-600 uppercase tracking-wide mb-3 px-2 py-0.5 bg-sky-50 rounded">
+                Intermediate
+              </p>
               <p className="text-zinc-600 leading-relaxed">
                 A stage for showcasing advancing proficiency, consistency, and a deeper commitment to the troop.
               </p>
             </div>
 
-            {/* Level 4 */}
-            <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-zinc-200 transition-all hover:-translate-y-1 hover:shadow-xl">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-amber-500/40 via-amber-400/30 to-transparent group-hover:from-amber-500 group-hover:via-amber-400"></div>
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-amber-600 ring-1 ring-amber-100 group-hover:bg-amber-600 group-hover:text-white transition-colors">
                 <ShieldCheck size={24} />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-1">Gurupadh</h3>
-              <p className="text-sm font-semibold text-blue-500 uppercase tracking-wide mb-3">Advanced Leadership</p>
+              <p className="inline-flex items-center gap-2 text-[11px] font-semibold text-amber-600 uppercase tracking-wide mb-3 px-2 py-0.5 bg-amber-50 rounded">
+                Advanced Leadership
+              </p>
               <p className="text-zinc-600 leading-relaxed">
                 Emphasizes mentorship and the ability to guide others. The transition from learner to leader.
               </p>
             </div>
 
-            {/* Level 5 */}
-            <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-zinc-200 transition-all hover:-translate-y-1 hover:shadow-xl">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-purple-500/40 via-purple-400/30 to-transparent group-hover:from-purple-500 group-hover:via-purple-400"></div>
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-purple-50 text-purple-600 ring-1 ring-purple-100 group-hover:bg-purple-600 group-hover:text-white transition-colors">
                 <Crown size={24} />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-1">Rajyapuraskar</h3>
-              <p className="text-sm font-semibold text-blue-500 uppercase tracking-wide mb-3">State Level Award</p>
+              <p className="inline-flex items-center gap-2 text-[11px] font-semibold text-purple-600 uppercase tracking-wide mb-3 px-2 py-0.5 bg-purple-50 rounded">
+                State Level Award
+              </p>
               <p className="text-zinc-600 leading-relaxed">
                 The pinnacle of the scouting journey. A prestigious state-level award that honors exceptional achievement.
               </p>
@@ -550,8 +559,9 @@ export default function Home() {
             </p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-5 gap-6">
-            <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-zinc-200 transition-all hover:-translate-y-1 hover:shadow-xl">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-blue-500/40 via-indigo-400/30 to-transparent group-hover:from-blue-500 group-hover:via-indigo-400"></div>
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-blue-50 text-blue-600 ring-1 ring-blue-100 group-hover:bg-blue-600 group-hover:text-white transition-colors">
                 <Briefcase size={24} />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-1">Government Jobs</h3>
@@ -560,8 +570,9 @@ export default function Home() {
                 Access reserved opportunities across Railways and Central sectors.
               </p>
             </div>
-            <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-zinc-200 transition-all hover:-translate-y-1 hover:shadow-xl">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-indigo-500/40 via-blue-400/30 to-transparent group-hover:from-indigo-500 group-hover:via-blue-400"></div>
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-indigo-50 text-indigo-600 ring-1 ring-indigo-100 group-hover:bg-indigo-600 group-hover:text-white transition-colors">
                 <GraduationCap size={24} />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-1">Higher Education</h3>
@@ -570,8 +581,9 @@ export default function Home() {
                 Leverage recognition to strengthen applications and placements.
               </p>
             </div>
-            <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-zinc-200 transition-all hover:-translate-y-1 hover:shadow-xl">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-emerald-500/40 via-green-400/30 to-transparent group-hover:from-emerald-500 group-hover:via-green-400"></div>
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-emerald-50 text-emerald-600 ring-1 ring-emerald-100 group-hover:bg-emerald-600 group-hover:text-white transition-colors">
                 <Ticket size={24} />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-1">Travel Perks</h3>
@@ -580,8 +592,9 @@ export default function Home() {
                 Reduced fares for official activities and recognized service.
               </p>
             </div>
-            <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-amber-600 group-hover:bg-amber-600 group-hover:text-white transition-colors">
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-zinc-200 transition-all hover:-translate-y-1 hover:shadow-xl">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-amber-500/40 via-yellow-400/30 to-transparent group-hover:from-amber-500 group-hover:via-yellow-400"></div>
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-amber-50 text-amber-600 ring-1 ring-amber-100 group-hover:bg-amber-600 group-hover:text-white transition-colors">
                 <Trophy size={24} />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-1">Medals of Honor</h3>
@@ -590,8 +603,9 @@ export default function Home() {
                 Eligibility for high honors from state and national leadership.
               </p>
             </div>
-            <div className="group rounded-2xl bg-white p-6 shadow-sm ring-1 ring-zinc-200 transition-all hover:-translate-y-1 hover:shadow-md">
-              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-purple-50 text-purple-600 group-hover:bg-purple-600 group-hover:text-white transition-colors">
+            <div className="group relative overflow-hidden rounded-2xl bg-white p-6 shadow-md border border-zinc-200 transition-all hover:-translate-y-1 hover:shadow-xl">
+              <div className="absolute inset-x-0 top-0 h-1 bg-gradient-to-r from-purple-500/40 via-pink-400/30 to-transparent group-hover:from-purple-500 group-hover:via-pink-400"></div>
+              <div className="mb-4 inline-flex h-12 w-12 items-center justify-center rounded-xl bg-purple-50 text-purple-600 ring-1 ring-purple-100 group-hover:bg-purple-600 group-hover:text-white transition-colors">
                 <Landmark size={24} />
               </div>
               <h3 className="text-xl font-bold text-zinc-900 mb-1">National Exposure</h3>
@@ -605,80 +619,36 @@ export default function Home() {
       </section>
 
       {/* --- 11. Footer (The "Flash" & Grid Edition) --- */}
-      <footer className="relative bg-zinc-950 pt-20 pb-10 overflow-hidden font-sans border-t border-white/5">
-        
-        {/* --- 1. Background Effects (Grid & Flash) --- */}
-        <div className="absolute inset-0 -z-10">
-           {/* The "Blue Flash" (Spotlight from bottom) */}
-           <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-blue-600/20 blur-[120px] rounded-full pointer-events-none opacity-60"></div>
-           
-           {/* The Tech Grid */}
-           <div className="absolute inset-0 bg-[linear-gradient(to_right,#80808012_1px,transparent_1px),linear-gradient(to_bottom,#80808012_1px,transparent_1px)] bg-[size:40px_40px] [mask-image:radial-gradient(ellipse_60%_50%_at_50%_100%,#000_70%,transparent_100%)]"></div>
-        </div>
-
-        <div className="mx-auto max-w-7xl px-6 lg:px-8 relative z-10">
-          
-          <div className="flex flex-col md:flex-row justify-between items-center gap-8 mb-16">
-            
-            {/* Brand Area */}
-            <div className="flex items-center gap-4">
-               <div className="relative h-14 w-14 rounded-2xl overflow-hidden shadow-lg shadow-blue-900/20 ring-1 ring-white/10 bg-black">
-                 <Image
-                   src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516854/logo_bivaq2.jpg"
-                   alt="HSG Logo"
-                   fill
-                   className="object-contain p-1"
-                 />
-               </div>
-               <div className="flex flex-col">
-                  <span className="text-2xl font-bold text-white tracking-tight leading-none">CMRIT HSG</span>
-                  <span className="text-xs font-medium text-blue-400 uppercase tracking-[0.2em] mt-1">Rover & Ranger Unit</span>
-               </div>
+      <footer className="bg-zinc-50 border-t border-zinc-200">
+        <div className="mx-auto max-w-7xl px-6 lg:px-8 py-10">
+          <div className="flex flex-col md:flex-row items-center justify-between gap-6">
+            <div className="flex items-center gap-3">
+              <div className="relative h-10 w-10 rounded-lg overflow-hidden ring-1 ring-zinc-200 bg-white">
+                <Image
+                  src="https://res.cloudinary.com/dq2suftps/image/upload/v1722516854/logo_bivaq2.jpg"
+                  alt="HSG Logo"
+                  fill
+                  className="object-contain p-1"
+                />
+              </div>
+              <div className="flex flex-col">
+                <span className="text-sm font-bold text-zinc-900">CMRIT HSG</span>
+                <span className="text-xs text-zinc-500">Rover & Ranger Unit</span>
+              </div>
             </div>
-
-            {/* Socials (Glassmorphism) */}
-            <div className="flex items-center gap-4">
-               <a href="#" className="group relative flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all hover:bg-blue-600 hover:border-blue-500 hover:scale-110">
-                  <Instagram size={18} className="text-zinc-400 group-hover:text-white" />
-               </a>
-               <a href="#" className="group relative flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all hover:bg-sky-500 hover:border-sky-400 hover:scale-110">
-                  <Twitter size={18} className="text-zinc-400 group-hover:text-white" />
-               </a>
-               <a href="#" className="group relative flex h-10 w-10 items-center justify-center rounded-full bg-white/5 border border-white/10 transition-all hover:bg-blue-700 hover:border-blue-600 hover:scale-110">
-                  <Linkedin size={18} className="text-zinc-400 group-hover:text-white" />
-               </a>
+            <div className="flex items-center gap-6 text-sm">
+              <a href="mailto:hindustanscoutsandguides.cmrit@gmail.com" className="text-zinc-600 hover:text-zinc-900 transition-colors">
+                Email
+              </a>
+              <a href="tel:+919951040546" className="text-zinc-600 hover:text-zinc-900 transition-colors">
+                Call
+              </a>
             </div>
-
           </div>
-
-          {/* Divider Line */}
-          <div className="h-px w-full bg-gradient-to-r from-transparent via-white/10 to-transparent mb-8"></div>
-
-          <div className="flex flex-col-reverse md:flex-row justify-between items-center gap-6 text-sm text-zinc-500">
-             
-             {/* Copyright */}
-             <div className="flex flex-col md:flex-row gap-1 md:gap-4 text-center md:text-left">
-               <span>&copy; 2024 Hindustan Scouts & Guides CMRIT.</span>
-               <span className="hidden md:inline text-zinc-700">|</span>
-               <span>
-                 Designed by <span className="text-zinc-300 font-semibold hover:text-blue-400 cursor-pointer transition-colors">Redline.Inc</span>
-               </span>
-             </div>
-             
-             {/* Direct Contact Links */}
-             <div className="flex gap-6 font-medium">
-               <a href="mailto:hindustanscoutsandguides.cmrit@gmail.com" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
-                 <Mail size={14} />
-                 <span>Email Us</span>
-               </a>
-               <a href="tel:+919951040546" className="flex items-center gap-2 hover:text-blue-400 transition-colors">
-                 <Phone size={14} />
-                 <span>Call Now</span>
-               </a>
-             </div>
-
+          <div className="mt-6 h-px w-full bg-zinc-200"></div>
+          <div className="mt-6 text-xs text-zinc-500">
+            © 2024 Hindustan Scouts & Guides CMRIT. All rights reserved.
           </div>
-
         </div>
       </footer>
     </div>
