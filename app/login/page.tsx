@@ -2,6 +2,7 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { useRouter } from "next/navigation";
 import { 
   User, 
   ShieldCheck, 
@@ -14,6 +15,9 @@ import {
 
 export default function LoginPage() {
   const [loginType, setLoginType] = useState<"student" | "admin">("student");
+  const [identity, setIdentity] = useState("");
+  const [password, setPassword] = useState("");
+  const router = useRouter();
 
   return (
     <div className="min-h-screen w-full flex bg-white">
@@ -88,7 +92,17 @@ export default function LoginPage() {
           </div>
 
           {/* Form */}
-          <form className="space-y-8">
+          <form
+            className="space-y-8"
+            onSubmit={(e) => {
+              e.preventDefault();
+              if (loginType === "admin") {
+                router.push("/admin-dashboard");
+              } else {
+                router.push("/student-dashboard");
+              }
+            }}
+          >
             
             {/* Input 1: Identity */}
             <div className="group relative">
@@ -107,20 +121,21 @@ export default function LoginPage() {
                    type="text"
                    className="w-full bg-transparent border-b-2 border-zinc-200 py-3 pl-8 text-zinc-900 placeholder-zinc-300 focus:outline-none focus:border-blue-600 transition-all font-medium"
                    placeholder={loginType === 'student' ? "22R01...." : "admin@cmrit.ac.in"}
+                   value={identity}
+                   onChange={(e) => setIdentity(e.target.value)}
                  />
                </div>
             </div>
 
             {/* Input 2: Password */}
             <div className="group relative">
-               <div className="flex justify-between items-center mb-2">
+               <div className="flex items-center mb-2">
                  <label 
                    htmlFor="password" 
                    className="block text-xs font-bold uppercase tracking-wider text-zinc-500 group-focus-within:text-blue-600 transition-colors"
                  >
                    Password
                  </label>
-                 <a href="#" className="text-xs text-blue-600 hover:text-blue-800 font-medium">Forgot?</a>
                </div>
                <div className="relative flex items-center">
                  <div className="absolute left-0 text-zinc-400 group-focus-within:text-blue-600 transition-colors">
@@ -131,6 +146,8 @@ export default function LoginPage() {
                    type="password"
                    className="w-full bg-transparent border-b-2 border-zinc-200 py-3 pl-8 text-zinc-900 placeholder-zinc-300 focus:outline-none focus:border-blue-600 transition-all font-medium"
                    placeholder="••••••••"
+                   value={password}
+                   onChange={(e) => setPassword(e.target.value)}
                  />
                </div>
             </div>
@@ -149,7 +166,7 @@ export default function LoginPage() {
           {/* Help Text */}
           {loginType === 'student' && (
             <p className="text-center text-xs text-zinc-500">
-              New to HSG? <Link href="/#contact" className="text-zinc-900 font-bold hover:underline">Register for Induction</Link>
+              New to HSG? <Link href="/register" className="text-zinc-900 font-bold hover:underline">Create your account</Link>
             </p>
           )}
           {loginType === 'admin' && (
