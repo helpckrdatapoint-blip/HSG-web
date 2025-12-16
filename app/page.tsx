@@ -165,7 +165,7 @@ export default function Home() {
             {/* Right: CTA */}
             <div className="hidden md:flex items-center gap-4">
                <Link 
-                 href="#contact" 
+                 href="/register" 
                  className="rounded-full bg-blue-600 px-6 py-2.5 text-sm font-bold text-white shadow-md shadow-blue-600/20 hover:bg-blue-700 hover:scale-105 transition-all"
                >
                  Join Now
@@ -206,7 +206,7 @@ export default function Home() {
                    <LogIn size={18} /> Portal Login
                  </Link>
                 <Link 
-                   href="#contact" 
+                   href="/register" 
                    className="block w-full text-center rounded-lg bg-blue-700 px-4 py-3 text-sm font-semibold text-white hover:bg-blue-800"
                    onClick={() => setIsMobileMenuOpen(false)}
                  >
@@ -219,15 +219,22 @@ export default function Home() {
       </div>
 
      {/* --- 2. Hero Section --- */}
-      <section className="relative w-full min-h-[450px] md:min-h-[520px] bg-black">
-        <div className="relative h-[450px] md:h-[520px] overflow-hidden">
+      <section className="relative w-full min-h-[70svh] md:min-h-[520px] bg-black">
+        <div className="relative h-[70svh] md:h-[520px] overflow-hidden">
           <div
             className="flex h-full w-full transition-transform duration-700"
             style={{ transform: `translateX(-${heroIndex * 100}%)` }}
           >
             {heroImages.map((src, i) => (
               <div key={i} className="relative min-w-full h-full">
-                <Image src={src} alt={`Banner ${i + 1}`} fill className="object-cover" />
+                <Image 
+                  src={src} 
+                  alt={`Banner ${i + 1}`} 
+                  fill 
+                  className="object-cover object-center" 
+                  sizes="100vw"
+                  priority={i === 0}
+                />
               </div>
             ))}
           </div>
@@ -281,16 +288,16 @@ export default function Home() {
             <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-16 text-zinc-700 text-sm leading-relaxed text-justify">
               <div className="space-y-4 relative">
                  <p>
-                   The name 'Scouting' seems to have been inspired by the important and romantic role played by military scouts performing reconnaissance in the times of wars. This idea to Robert Baden-Powell was derived from his senior officer Captain Sessile during his young age while posted in British ruled India as captain in Scout unit of English Military. Robert has assigned to dig out the source of Heavy Armed force and inestimable Hindustani warriors during First Independent Movement 1857 sway. Both of them used to visit in Indian social sector and therefore came to learn about the life style and discovered that Gurukul system of education pattern and learned that students do acquire academic and non-academic ken simultaneous during the learning tenure.
+                   The name <span className="text-blue-600 font-semibold">Scouting</span> seems to have been inspired by the important and romantic role played by military scouts performing reconnaissance in the times of wars. This idea to <span className="text-blue-600 font-semibold">Robert Baden-Powell</span> was derived from his senior officer Captain Sessile during his young age while posted in British ruled India as captain in Scout unit of English Military. Robert has assigned to dig out the source of Heavy Armed force and inestimable Hindustani warriors during First Independent Movement 1857 sway. Both of them used to visit in Indian social sector and therefore came to learn about the life style and discovered that <span className="text-blue-600 font-semibold">Gurukul</span> system of education pattern and learned that students do acquire academic and non-academic ken simultaneous during the learning tenure.
                  </p>
                  <p>
-                   <strong>Scouting History in the World:</strong> Robert began coined the word Scouting under influenced from Indian Culture and Indian ancient system of education. The syllabus and teaching topics covered in this, actually were very much inherited in the culture of Indian Civilisation. Even the saying goes that Beden Powel got this idea by understanding teaching pattern adopted by Hindu Gurukul. He was also inspired by childhood teaching activities of Lord Shri Ram Chandra and Shri Laxman as depicted in Ramayana and added a Jungle Visit in syllabus. With the life of Balak Shri Krishana he remained astonished to know that the audacious in adolescent age.
+                   <strong className="text-blue-600">Scouting History in the World:</strong> Robert began coined the word <span className="text-blue-600 font-semibold">Scouting</span> under influenced from Indian Culture and Indian ancient system of education. The syllabus and teaching topics covered in this, actually were very much inherited in the culture of Indian Civilisation. Even the saying goes that Beden Powel got this idea by understanding teaching pattern adopted by Hindu <span className="text-blue-600 font-semibold">Gurukul</span>. He was also inspired by childhood teaching activities of Lord Shri Ram Chandra and Shri Laxman as depicted in Ramayana and added a Jungle Visit in syllabus. With the life of Balak Shri Krishana he remained astonished to know that the audacious in adolescent age.
                  </p>
                  <div className="hidden lg:block absolute right-[-2rem] top-0 bottom-0 w-px bg-zinc-200"></div>
               </div>
               <div className="space-y-4 relative">
                  <p>
-                   <strong>Origin:</strong> Scouting is stated as aim of supporting young people in their physical, mental and spiritual development, that they may play constructive roles in society. During the first half of the 20th century, the movement grew to encompass three major age groups each for boys (Cub Scout, Boy Scout, Rover Scout) and, in 1910, a new organization, Girl Guides, was created for girls (Brownie Guide, Girl Guide and Girl Scout, Ranger Guide).
+                   <strong className="text-blue-600">Origin:</strong> <span className="text-blue-600 font-semibold">Scouting</span> is stated as aim of supporting young people in their physical, mental and spiritual development, that they may play constructive roles in society. During the first half of the 20th century, the movement grew to encompass three major age groups each for boys (Cub Scout, Boy Scout, Rover Scout) and, in 1910, a new organization, Girl Guides, was created for girls (Brownie Guide, Girl Guide and Girl Scout, Ranger Guide).
                  </p>
                  <p>
                    As a military officer, Robert Baden-Powell was stationed in British India and Africa in the 1880s and 1890s. Since his youth, in military scouting and as part of their training—he showed his men how to survive in the wilderness. He noticed that it helped the soldiers to develop independence rather than just blindly follow officers' orders. In 1896, Baden-Powell was assigned to the Matabeleland region in Southern Rhodesia (now Zimbabwe) as Chief of Staff to Gen. Frederick Carrington during the Second Matabele War, and it was here that he first met and began a lifelong friendship with Frederick Russell Burnham, the American born Chief of Scouts for the British.
@@ -302,7 +309,7 @@ export default function Home() {
                    The need for the improved training of British military-enlisted scouts, particularly in initiative, self-reliance, and observational skills. Each member received a badge that illustrated a combined compass point and spearhead. The badge's logo was similar to the fleur-de-lis that scouting later adopted as its international symbol. In the United Kingdom, the public followed Powell's struggle to hold Mafeking through newspapers, and when the siege was broken, he had become a national hero.
                  </p>
                  <p>
-                   <strong>Scouting in India:</strong> Although, Scouting came in India solitary for European and Anglo Indian boys and girls under the banner of English by the name of 'Boys Scouts of India' in 1909 and same with Girl Guiding in 1913. However, Powel kept closed scouting doors for Indians. There was resentment in Indians for it and 1921, when World Chief Scout Lord Baden Powell came to India, under the Leadership of Pt. Madan Mohan Malviya, a Great Leader of India, Baden Powell was requested to open the doors for Indians but he refused brutally.
+                   <strong className="text-blue-600">Scouting in India:</strong> Although, <span className="text-blue-600 font-semibold">Scouting</span> came in India solitary for European and Anglo Indian boys and girls under the banner of English by the name of Boys Scouts of India in 1909 and same with Girl Guiding in 1913. However, Powel kept closed scouting doors for Indians. There was resentment in Indians for it and 1921, when World Chief Scout Lord Baden Powell came to India, under the Leadership of Pt. Madan Mohan Malviya, a Great Leader of India, Baden Powell was requested to open the doors for Indians but he refused brutally.
                  </p>
               </div>
             </div>
@@ -352,8 +359,9 @@ export default function Home() {
 
           <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 xl:gap-16 text-zinc-700 text-sm leading-relaxed text-justify">
             <div className="space-y-4 relative">
+              <p className="text-lg font-bold text-zinc-900">Mission</p>
               <p>
-                The Hindustan Scouts and Guides Association at CMRIT is a student chapter aligned to a national movement dedicated to holistic youth development. With a focus on service, discipline, and leadership, HSGA nurtures responsible citizens who contribute meaningfully to their communities.
+                The <span className="text-blue-600 font-semibold">Hindustan Scouts and Guides Association</span> at <span className="text-blue-600 font-semibold">CMRIT</span> is a student chapter aligned to a national movement dedicated to holistic youth development. With a focus on service, discipline, and leadership, <span className="text-blue-600 font-semibold">HSGA</span> nurtures responsible citizens who contribute meaningfully to their communities.
               </p>
               <p>
                 Our activities combine physical endurance, outdoor skills, teamwork, and social responsibility. Students participate in camps, disaster management training, first aid, and community service initiatives that cultivate confidence, empathy, and resilience.
@@ -362,21 +370,24 @@ export default function Home() {
             </div>
 
             <div className="space-y-4 relative">
+              <p className="text-lg font-bold text-zinc-900">Vision</p>
               <p>
-                Mission: To educate young people through a value system based on the Scout Promise and Law, helping build a better world where individuals are self‑fulfilled and play constructive roles in society.
+                <span className="text-blue-600 font-semibold">Mission:</span> To educate young people through a value system based on the <span className="text-blue-600 font-semibold">Scout Promise</span> and <span className="text-blue-600 font-semibold">Law</span>, helping build a better world where individuals are self‑fulfilled and play constructive roles in society.
               </p>
               <p>
-                Vision: To empower youth across diverse backgrounds through structured programs that develop physical, mental, and moral strength. We collaborate with institutions and associations to broaden access and opportunities for growth.
+                <span className="text-blue-600 font-semibold">Vision:</span> To empower youth across diverse backgrounds through structured programs that develop physical, mental, and moral strength. We collaborate with institutions and associations to broaden access and opportunities for growth.
               </p>
               <div className="hidden lg:block absolute right-[-2rem] top-0 bottom-0 w-px bg-zinc-200"></div>
             </div>
 
             <div className="space-y-4">
+              <p className="text-lg font-bold text-zinc-900">Motto</p>
               <p>
-                Motto: Serve Man to Reach God. We believe selfless service is a direct path to purpose and dignity. By helping those in need and acting with compassion, students learn that true leadership begins with responsibility and kindness.
+                <span className="text-blue-600 font-semibold">Motto:</span> Serve Man to Reach God. We believe selfless service is a direct path to purpose and dignity. By helping those in need and acting with compassion, students learn that true leadership begins with responsibility and kindness.
               </p>
+              <p className="text-lg font-bold text-zinc-900">Values</p>
               <p>
-                Values: Integrity, courage, perseverance, and community. These principles guide every activity, ensuring that achievements reflect character as much as skills. HSGA strives to create leaders who elevate others.
+                <span className="text-blue-600 font-semibold">Values:</span> Integrity, courage, perseverance, and community. These principles guide every activity, ensuring that achievements reflect character as much as skills. HSGA strives to create leaders who elevate others.
               </p>
             </div>
           </div>
